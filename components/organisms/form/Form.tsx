@@ -25,16 +25,20 @@ const Form = () => {
             {errors.boast?.message && <p>{String(errors.boast.message)}</p>}
             <div>
                 <textarea
+                    className="border w-full rounded resize-none h-[200px] p-4 mt-1"
                     {...register("boast")}
                     autoComplete="off"
                     name="boast"
+                    placeholder="あなたの自慢エピソードを記入してください"
                 />
             </div>
-            <Button
-                onClick={submitFn}
-            >
-                自慢する
-            </Button>
+            <div className="mt-4 flex justify-center">
+                <Button
+                    onClick={submitFn}
+                >
+                    自慢する
+                </Button>
+            </div>
         </form>
     )
 }

@@ -28,15 +28,20 @@ const Modal: FC<ModalType> = ({
                 isOpen={isOpen}
                 closeModal={handleClick}
             >
-                {modalChildren}
-                <div
-                    className="mt-2 text-center"
-                >
-                    <Button
-                        onClick={handleClick}
+                <div className="relative">
+                    {modalChildren}
+                    <div
+                        className="absolute -top-5 -right-5 bg-black hover:opacity-60 flex justify-center items-center rounded-full"
                     >
-                        閉じる
-                    </Button>
+                        <button
+                            onClick={handleClick}
+                            type="button"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="size-6 stroke-white">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </Dialog>
         </>

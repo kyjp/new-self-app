@@ -2,6 +2,7 @@ import Title from '@/components/atoms/title/Title'
 import Modal from '@/components/molecules/modal/Modal'
 import Form from '@/components/organisms/form/Form'
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 const TopTemplate = () => {
@@ -31,6 +32,11 @@ const TopTemplate = () => {
                     >
                         自慢したい
                     </Modal>
+                </div>
+                <div className="flex justify-end mt-4">
+                    <Link href="/boast/">
+                        自慢されたい
+                    </Link>
                 </div>
             </article>
         </div>
